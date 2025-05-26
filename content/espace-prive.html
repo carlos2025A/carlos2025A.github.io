@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Espace Privé DIWA</title>
+</head>
+<body>
+  <h1>🔒 Espace privé</h1>
+  <p>Entrez le mot de passe pour accéder à la note :</p>
+
+  <input type="password" id="passwordInput" placeholder="Mot de passe">
+  <button onclick="checkPassword()">Valider</button>
+
+  <div id="secretContent" style="display:none; margin-top: 20px;">
+    <h2>✅ Bienvenue Carlos !</h2>
+    <p>Voici ton espace privé DIWA-25, avec des infos que toi seul peux voir.</p>
+    <ul>
+      <li>📦 Produits en test</li>
+      <li>💰 Prévisions de ventes</li>
+      <li>📈 Stratégies internes</li>
+    </ul>
+  </div>
+
+  <script>
+    function checkPassword() {
+      const pass = document.getElementById("passwordInput").value;
+      if (pass === "DIWA2025") {
+        document.getElementById("secretContent").style.display = "block";
+      } else {
+        alert("Mot de passe incorrect !");
+      }
+    }
+  </script>
+</body>
+</html>
